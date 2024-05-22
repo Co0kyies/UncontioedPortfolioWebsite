@@ -1,0 +1,33 @@
+---
+import GoogleFonts from "../layouts/GoogleFonts.astro";
+import ThemeChanger from "../components/ThemeChanger.svelte";
+import Hero from "../components/Hero.svelte";
+import Posts from "../components/Posts.svelte";
+import Projects from "../components/Projects.svelte";
+import Awards from "../components/Awards.svelte"
+import Noise from "../layouts/Noise.svelte"
+import "../styles/main-page.css"
+import "../styles/dark-theme.css"
+---
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=, initial-scale=1.0">
+	<GoogleFonts></GoogleFonts>
+	<!-- <FontAwesomeKit></FontAwesomeKit> -->
+	<title>Document</title>
+</head>
+<ThemeChanger client:load>
+	<Noise></Noise>
+	<Hero client:idle></Hero>
+	<div class="container">
+		<Posts></Posts>
+		<Projects client:visible></Projects>
+		<Awards></Awards>
+	</div>
+</ThemeChanger>
+
+</html>

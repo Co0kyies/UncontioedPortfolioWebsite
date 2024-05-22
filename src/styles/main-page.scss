@@ -1,0 +1,43 @@
+@import "./global.scss";
+@import "./breaking_points.scss";
+@import "./colors.scss";
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+h2 {
+  font-family: "Cormorant SC", serif;
+  font-style: normal;
+  font-size: 10vw;
+  @include tablet {
+    font-size: 6rem;
+  }
+}
+
+hr {
+  width: 100%;
+  margin: 1rem 0;
+  &.black {
+    border-top: $black;
+  }
+}
+
+.container {
+  margin: auto;
+  width: 90%;
+  @include tablet {
+    width: 85%;
+  }
+}
+
+section {
+  padding-bottom: 4rem;
+  @include desktop {
+    margin-bottom: 6rem;
+  }
+}
